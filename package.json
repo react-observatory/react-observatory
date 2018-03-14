@@ -4,6 +4,12 @@
   "description": "Dynamic reducer and epic injection for Redux Observable apps",
   "module": "es/react-observatory.js",
   "main": "lib/react-observatory.js",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src"
+  ],
   "scripts": {
     "clean": "rimraf lib dist es coverage",
     "format": "prettier --write \"{src,test}/**/*.js\"",
