@@ -2,6 +2,8 @@
 
 Code-split everything.
 
+[![Build Status](https://travis-ci.org/halfzebra/react-observatory.svg?branch=master)](https://travis-ci.org/halfzebra/react-observatory)
+
 ## Prerequisites
 
 React Observable can be used to it's full potential in projects that rely on [redux,](https://github.com/reactjs/redux) [redux-observable](https://github.com/redux-observable/redux-observable/) and [react-loadable](https://github.com/jamiebuilds/react-loadable) or any other way for code-splitting.
