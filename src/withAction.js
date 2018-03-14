@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import getInjectors from "./epicInjectors";
-import hoistNonReactStatics from "hoist-non-react-statics";
+import React from 'react';
+import PropTypes from 'prop-types';
+import getInjectors from './epicInjectors';
+import hoistNonReactStatics from 'hoist-non-react-statics';
 
 /**
  * High order component, that enables you to emit an action on componentWillMount.
@@ -21,7 +21,7 @@ export default action => WrappedComponent => {
     };
     static displayName = `withAction(${WrappedComponent.displayName ||
       WrappedComponent.name ||
-      "Component"})`;
+      'Component'})`;
 
     injectors = getInjectors(this.context.store);
 

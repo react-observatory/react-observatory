@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import getInjectors from "./epicInjectors";
-import hoistNonReactStatics from "hoist-non-react-statics";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import getInjectors from './epicInjectors';
+import hoistNonReactStatics from 'hoist-non-react-statics';
 
 /**
  * Dynamically injects an epic
@@ -17,7 +17,7 @@ export default epic => WrappedComponent => {
     };
     static displayName = `withEpic(${WrappedComponent.displayName ||
       WrappedComponent.name ||
-      "Component"})`;
+      'Component'})`;
 
     injectors = getInjectors(this.context.store);
 

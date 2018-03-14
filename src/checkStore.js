@@ -1,13 +1,13 @@
-import conformsTo from "lodash.conformsto";
-import isFunction from "lodash.isfunction";
-import isObject from "lodash.isobject";
-import isArray from "lodash.isarray";
-import invariant from "invariant";
+import conformsTo from 'lodash.conformsto';
+import isFunction from 'lodash.isfunction';
+import isObject from 'lodash.isobject';
+import isArray from 'lodash.isarray';
+import invariant from 'invariant';
 import {
   CREATE_REDUCER_SYMBOL,
   INJECTED_EPICS_PROPERTY,
   EPICS_STREAM_SYMBOL
-} from "./constants";
+} from './constants';
 
 /**
  * Validate the shape of redux store for dynamic reducer injection.
@@ -22,14 +22,14 @@ export function checkStoreWithAsyncReducers(store) {
   };
   invariant(
     conformsTo(store, shape) && isFunction(store[CREATE_REDUCER_SYMBOL]),
-    "(react-observatory) injectReducer: Expected a valid redux store"
+    '(react-observatory) injectReducer: Expected a valid redux store'
   );
 }
 
 const checkEpicStream = stream => {
   invariant(
     isFunction(stream.next) && isFunction(stream.subscribe),
-    "(react-observatory) injectEpic: Expected a valid stream"
+    '(react-observatory) injectEpic: Expected a valid stream'
   );
   return isFunction(stream.next) && isFunction(stream.subscribe);
 };
@@ -48,6 +48,6 @@ export function checkStoreWithAsyncEpics(store) {
 
   invariant(
     conformsTo(store, shape) && checkEpicStream(store[EPICS_STREAM_SYMBOL]),
-    "(react-observatory) injectEpic: Expected a valid redux store"
+    '(react-observatory) injectEpic: Expected a valid redux store'
   );
 }

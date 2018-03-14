@@ -1,4 +1,4 @@
-import { CREATE_REDUCER_SYMBOL } from "./constants";
+import { CREATE_REDUCER_SYMBOL } from './constants';
 
 /**
  * A store enhancer that enables dynamic injection of reducers.

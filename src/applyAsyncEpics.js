@@ -1,4 +1,4 @@
-import { EPICS_STREAM_SYMBOL, INJECTED_EPICS_PROPERTY } from "./constants";
+import { EPICS_STREAM_SYMBOL, INJECTED_EPICS_PROPERTY } from './constants';
 
 /**
  * Creates a store enhancer that enables dynamic injection of epics.

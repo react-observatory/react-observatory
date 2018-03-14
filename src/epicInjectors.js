@@ -1,5 +1,5 @@
-import { EPICS_STREAM_SYMBOL, INJECTED_EPICS_PROPERTY } from "./constants";
-import { checkStoreWithAsyncEpics } from "./checkStore";
+import { EPICS_STREAM_SYMBOL, INJECTED_EPICS_PROPERTY } from './constants';
+import { checkStoreWithAsyncEpics } from './checkStore';
 
 export default function getInjectors(store) {
   checkStoreWithAsyncEpics(store);
