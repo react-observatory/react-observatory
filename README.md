@@ -2,7 +2,7 @@
 
 Code-split everything.
 
-[![Build Status](https://travis-ci.org/halfzebra/react-observatory.svg?branch=master)](https://travis-ci.org/halfzebra/react-observatory)
+[![Build Status](https://travis-ci.org/halfzebra/react-observatory.svg?branch=master)](https://travis-ci.org/halfzebra/react-observatory) [![npm version](https://badge.fury.io/js/react-observatory.svg)](https://badge.fury.io/js/react-observatory)
 
 ## Prerequisites
 
