@@ -2,11 +2,11 @@
 
 This chapter covers the basic setup for Dynamic Epic Injection.
 
-Please note that epics are kept running in runtime even after the Component is unmounted.
+Please note that epics are kept running at runtime even after the Component is unmounted.
 
 ## Root Epic Setup
 
-To enable Dynamic Epic injection we need to create a root epic using `createRootEpic`
+To enable Dynamic Epic injection, we need to create a root epic using `createRootEpic`
 
 It returns us a reference to the stream containing all epics and the actual root epic we can run.
 
@@ -26,7 +26,7 @@ export { epic$, rootEpic }
 
 ## Store Configuration
 
-After that we need to enhance the store with `applyAsyncEpics`.
+After that, we need to enhance the store with `applyAsyncEpics`.
 
 We have to pass a stream of all epics `epic$` so it can inject dynamically loaded epics.
 
@@ -52,7 +52,7 @@ const store = createStore(
 
 ## Dynamic Epic Injection inside the Components
 
-Now we can start injecting reducers dynamically, the reducer for `TaskList` component will be loaded along with React Component.
+Now we can start injecting epics dynamically, the epic for `Blog` component will be loaded along with React Component.
 
 ```js
 import { injectEpic } from 'react-observatory'
