@@ -4,10 +4,10 @@ import getInjectors from './epicInjectors';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 
 /**
- * High order component, that enables you to emit an action on componentWillMount.
+ * High-Order Component that enables you to emit an action on componentWillMount.
  *
  * @param action {string} An action to be emitted on componentWillMount.
- * @return {function} HOC factory that enables the component to emit an action on componentWillMount.
+ * @return {function(*)} HOC factory that enables the component to emit an action on componentWillMount.
  */
 export default action => WrappedComponent => {
   class InjectEpic extends React.Component {

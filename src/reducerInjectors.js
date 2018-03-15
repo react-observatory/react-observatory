@@ -5,6 +5,13 @@ import isString from 'lodash.isstring';
 import { checkStoreWithAsyncReducers } from './checkStore';
 import { CREATE_REDUCER_SYMBOL } from './constants';
 
+/**
+ * Internal helper function for extracting the injector for epics.
+ *
+ * @param store
+ * @param isValid
+ * @return {injectReducer}
+ */
 export function injectReducerFactory(store, isValid) {
   return function injectReducer(key, reducer) {
     if (!isValid) checkStoreWithAsyncReducers(store);

@@ -1,6 +1,12 @@
 import { EPICS_STREAM_SYMBOL, INJECTED_EPICS_PROPERTY } from './constants';
 import { checkStoreWithAsyncEpics } from './checkStore';
 
+/**
+ * Internal helper function for extracting the injector for epics.
+ *
+ * @param store
+ * @return {{injectEpic: function(*=)}}
+ */
 export default function getInjectors(store) {
   checkStoreWithAsyncEpics(store);
   return {

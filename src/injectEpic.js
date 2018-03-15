@@ -4,10 +4,10 @@ import getInjectors from './epicInjectors';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 
 /**
- * Dynamically injects an epic
+ * High-Order Component that dynamically injects a reducer.
  *
  * @param epic {@class Observable<T>} An epic that will be injected
- * @return {function} HOC factory that injects the epic.
+ * @return {function(*)}  HOC factory that injects the epic.
  */
 export default epic => WrappedComponent => {
   class InjectEpic extends Component {
