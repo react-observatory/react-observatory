@@ -1,12 +1,12 @@
 # React Observatory
 
-Code-split everything.
+A library to provide you with tooling and knowledge about building your React Redux Architecture around code-splitting.
 
 [![Build Status](https://travis-ci.org/halfzebra/react-observatory.svg?branch=master)](https://travis-ci.org/halfzebra/react-observatory) [![npm version](https://badge.fury.io/js/react-observatory.svg)](https://badge.fury.io/js/react-observatory)
 
 ## Prerequisites
 
-React Observable can be used to it's full potential in projects that rely on [redux,](https://github.com/reactjs/redux) [redux-observable](https://github.com/redux-observable/redux-observable/) and [react-loadable](https://github.com/jamiebuilds/react-loadable) or any other way for code-splitting.
+React Observatory can be used to it's full potential in projects that already employ [redux,](https://github.com/reactjs/redux) [redux-observable](https://github.com/redux-observable/redux-observable/) and [react-loadable](https://github.com/jamiebuilds/react-loadable) or any other way for code-splitting.
 
 ## Installation
 

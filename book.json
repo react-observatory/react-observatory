@@ -1,0 +1,19 @@
+{
+  "gitbook": "^3.1.1",
+  "title": "react-observatory",
+  "plugins": ["edit-link", "prism", "github", "anker-enable"],
+  "pluginsConfig": {
+    "sharing": {
+      "google": false,
+      "facebook": false,
+      "twitter": false
+    },
+    "edit-link": {
+      "base": "https://github.com/halfzebra/react-observatory/tree/master",
+      "label": "Edit This Page"
+    },
+    "github": {
+      "url": "https://github.com/halfzebra/react-observatory/"
+    }
+  }
+}
