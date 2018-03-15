@@ -4,6 +4,8 @@ A function that takes a reducer creator, created with [composeReducerCreator](/d
 
 #### Arguments
 
+1. reducerCreator (`Function`): a function that accepts an object with reducers and 
+
 #### Returns
 
 #### Example

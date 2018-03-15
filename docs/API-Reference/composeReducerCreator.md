@@ -4,6 +4,8 @@ A helper function that takes the Object with Reducers and returns a reducer crea
 
 #### Arguments
 
+1. 
+
 #### Returns
 
 #### Example

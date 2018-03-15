@@ -8,6 +8,8 @@ The action will receive the [location](https://reacttraining.com/react-router/we
 
 #### Arguments
 
+1. `action` (*`string`*): Redux [Action](https://redux.js.org/basics/actions) to dispatch.
+
 #### Returns
 
 #### Example
