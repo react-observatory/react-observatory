@@ -1,5 +1,9 @@
 # Reducers
 
+This chapter covers the basic setup for Dynamic Reducer Injection.
+
+## Global Reducer Setup
+
 First we need to create a function that will allow us to inject new reducers dynamically.
 
 In this example the `counter` reducer will be available on every page.
@@ -16,6 +20,8 @@ export default composeReducerCreator({
 })
 ```
 
+## Store Configuration
+
 After that we need to enhance the store with applyAsyncReducers.
 
 It needs the `reducerCreator` to replace the old reducer with an updated one, when we inject new reducers dynamically.
@@ -31,6 +37,8 @@ const store = createStore(
   applyAsyncReducers(reducerCreator)
 );
 ```
+
+## Dynamic Reducer Injection inside the Components
 
 Now we can start injecting reducers dynamically, the reducer for `TaskList` component will be loaded along with React Component.
 
