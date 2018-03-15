@@ -36,6 +36,7 @@ if (env === "development" || env === "production") {
     name: "ReactObservatory",
     globals: {
       react: "React",
+      redux: "Redux",
       "prop-types": "PropTypes"
     }
   };
