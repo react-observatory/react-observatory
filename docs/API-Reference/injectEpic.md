@@ -2,6 +2,8 @@
 
 `injectEpic()` is used to create a [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html) that will inject the epic into the runtime.
 
+The Epic stays in the runtime after component is unmounted.
+
 #### Arguments
 
 1. (`epic`) *[Epic](https://redux-observable.js.org/docs/basics/Epics.html)*: an epic to inject.

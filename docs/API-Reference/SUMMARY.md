@@ -7,4 +7,3 @@ API Reference
 * [injectEpic](/docs/API-Reference/injectEpic.md)
 * [injectReducer](/docs/API-Reference/injectReducer.md)
 * [withAction](/docs/API-Reference/withAction.md)
-
