@@ -4,12 +4,14 @@ import withAction from './withAction';
 import applyAsyncEpics from './applyAsyncEpics';
 import applyAsyncReducers from './applyAsyncReducers';
 import composeReducerCreator from './composeReducerCreator';
+import createRootEpic from './createRootEpic';
 
-export default {
+export {
   injectEpic,
   injectReducer,
   withAction,
   applyAsyncEpics,
   applyAsyncReducers,
-  composeReducerCreator
+  composeReducerCreator,
+  createRootEpic
 };
