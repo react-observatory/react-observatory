@@ -2,6 +2,8 @@
 
 This chapter covers the basic setup for Dynamic Reducer Injection.
 
+Please note that reducers are not removed from Store when Component is unmounted.
+
 ## Global Reducer Setup
 
 First we need to create a function that will allow us to inject new reducers dynamically.
