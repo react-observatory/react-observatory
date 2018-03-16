@@ -15,30 +15,30 @@ A function that takes a stream of [Epics](https://redux-observable.js.org/docs/b
 ### `./src/epics`
 
 ```js
-import { createRootEpic } from 'react-observatory';
+import { createRootEpic } from 'react-observatory'
 
 const logger = action$ =>
   action$
     .ofType('Up')
     .do(console.log)
-    .ignoreElements();
+    .ignoreElements()
 
-const { epic$, rootEpic } = createRootEpic(logger);
+const { epic$, rootEpic } = createRootEpic(logger)
 
-export { epic$, rootEpic };
+export { epic$, rootEpic }
 
 ```
 
 ### `./src/configureStore`
 
 ```js
-import { createStore, compose, applyMiddleware } from 'redux';
-import { applyAsyncEpics } from 'react-observatory';
-import { createEpicMiddleware } from 'redux-observable';
-import reducers from './reducers';
-import { rootEpic, epic$ } from './epics';
+import { createStore, compose, applyMiddleware } from 'redux'
+import { applyAsyncEpics } from 'react-observatory'
+import { createEpicMiddleware } from 'redux-observable'
+import reducers from './reducers'
+import { rootEpic, epic$ } from './epics'
 
-const epicMiddleware = createEpicMiddleware(rootEpic);
+const epicMiddleware = createEpicMiddleware(rootEpic)
 
 export default function configureStore(initialState = {}) {
   const store = createStore(
@@ -48,8 +48,8 @@ export default function configureStore(initialState = {}) {
       applyAsyncEpics(epic$),
       applyMiddleware(epicMiddleware)
     )
-  );
+  )
 
-  return store;
+  return store
 }
 ```

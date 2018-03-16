@@ -13,17 +13,17 @@ A function that takes a reducer creator, created with [composeReducerCreator](/d
 #### Example: Configuring the Store for dynamic Reducer injection
 
 ```js
-import { createStore } from 'redux';
-import { applyAsyncReducers } from 'react-observatory';
-import reducerCreator from './reducers';
+import { createStore } from 'redux'
+import { applyAsyncReducers } from 'react-observatory'
+import reducerCreator from './reducers'
 
 export default function configureStore(initialState = {}) {
   const store = createStore(
     reducerCreator(),
     initialState,
     applyAsyncReducers(reducerCreator)
-  );
+  )
 
-  return store;
+  return store
 }
 ```

@@ -19,8 +19,8 @@ The action will receive the [location](https://reacttraining.com/react-router/we
 ### `./src/containers/About`
 
 ```js
-import { withAction } from 'react-observatory';
-import About from './About';
+import { withAction } from 'react-observatory'
+import About from './About'
 
 export default withAction('RouterAction.About')(About)
 ```

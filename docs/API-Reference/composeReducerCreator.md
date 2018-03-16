@@ -2,6 +2,8 @@
 
 A helper function that takes the Object with Reducers and returns a reducer creator for dynamic reducer injection by [applyAsyncReducers.](/docs/API-Reference/applyAsyncReducers.md)
 
+The reducer creator is only required for setting-up the store.
+
 #### Arguments
 
 1. `reducers` (*`Object`*): An object whose values correspond to different reducing functions that need to be combined into one. See the notes below for some rules every passed reducer must follow.
@@ -15,17 +17,17 @@ A helper function that takes the Object with Reducers and returns a reducer crea
 ### `./src/reducers`
 
 ```js
-import { composeReducerCreator } from 'react-observatory';
+import { composeReducerCreator } from 'react-observatory'
 
 const counter = (state = 0, action) => {
   if (action.type === 'Up') {
-    return state + 1;
+    return state + 1
   }
-  return state;
-};
+  return state
+}
 
 export default composeReducerCreator({
-  counter,
-});
+  counter
+})
 
 ```

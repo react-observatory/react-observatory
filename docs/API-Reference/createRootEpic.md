@@ -15,17 +15,17 @@ A helper for creating a root epic and a stream of epics that enables [adding new
 ### `./src/epics`
 
 ```js
-import { createRootEpic } from 'react-observatory';
+import { createRootEpic } from 'react-observatory'
 
 const logger = action$ =>
   action$
     .ofType('Up')
     .do(console.log)
-    .ignoreElements();
+    .ignoreElements()
 
-const { epic$, rootEpic } = createRootEpic(logger);
+const { epic$, rootEpic } = createRootEpic(logger)
 
-export { epic$, rootEpic };
+export { epic$, rootEpic }
 ```
 
 
