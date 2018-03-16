@@ -1,6 +1,6 @@
 {
   "name": "react-observatory",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Dynamic reducer and epic injection for Redux Observable apps",
   "module": "es/react-observatory.js",
   "main": "lib/react-observatory.js",
