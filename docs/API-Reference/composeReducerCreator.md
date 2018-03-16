@@ -10,4 +10,22 @@ A helper function that takes the Object with Reducers and returns a reducer crea
 
 (*`Function`*): A function that is used to create a set of reducers and will be used by [applyAsyncReducers](/docs/API-Reference/applyAsyncReducers.md) enhancer for dynamic Reducer injection. Serves as a replacement for [combineReducers.](https://redux.js.org/api-reference/combinereducers)
 
-#### Example
+#### Example: Composing a Reducer creator
+
+### `./src/reducers`
+
+```js
+import { composeReducerCreator } from 'react-observatory';
+
+const counter = (state = 0, action) => {
+  if (action.type === 'Up') {
+    return state + 1;
+  }
+  return state;
+};
+
+export default composeReducerCreator({
+  counter,
+});
+
+```
