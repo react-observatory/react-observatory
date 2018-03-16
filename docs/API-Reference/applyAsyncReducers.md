@@ -10,4 +10,20 @@ A function that takes a reducer creator, created with [composeReducerCreator](/d
 
 (*`Function`*): A store enhancer that is used as an argument for [createStore.](https://redux.js.org/api-reference/createstore) to enable dynamic Reducer injection.
 
-#### Example
+#### Example: Configuring the Store for dynamic Reducer injection
+
+```js
+import { createStore } from 'redux';
+import { applyAsyncReducers } from 'react-observatory';
+import reducerCreator from './reducers';
+
+export default function configureStore(initialState = {}) {
+  const store = createStore(
+    reducerCreator(),
+    initialState,
+    applyAsyncReducers(reducerCreator)
+  );
+
+  return store;
+}
+```
