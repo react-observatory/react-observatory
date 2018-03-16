@@ -25,3 +25,32 @@ const withEpic = injectEpic(epic)
 
 export default withEpic(Blog)
 ```
+
+
+#### Example: Injecting the Epic with Redux [compose](https://redux.js.org/api-reference/compose) into [connected](https://redux.js.org/basics/usage-with-react#implementing-container-components) Component
+
+```js
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { injectEpic } from 'react-observatory';
+import Blog from './Blog';
+import epic from './epics';
+
+function mapStateToProps(state) {
+  return {
+    blog: state.blog,
+  };
+}
+
+const mapDispatchToProps = { submitComment: () => ({ type: 'SubmitComment' }) };
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+
+const withEpic = injectEpic(epic);
+
+export default compose(
+  withEpic,
+  withConnect
+)(Blog);
+
+```
