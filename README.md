@@ -18,6 +18,7 @@ npm install --save react-observatory
 
 ## Thanks
 
+* [redux](https://redux.js.org/) for enabling better architectures.
 * [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) for a good idea on how to inject reducers and sagas dynamically;
 * [react-observable](https://redux-observable.js.org/) for enabling declarative side-effects in Redux architecture;
 * [react-loadable](https://github.com/jamiebuilds/react-loadable) for beautiful code-splitting on component level.
