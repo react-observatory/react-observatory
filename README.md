@@ -16,6 +16,40 @@ To install the stable version:
 npm install --save react-observatory
 ```
 
+## The Gist
+
+Here's an example of [Container Component](https://redux.js.org/basics/usage-with-react#presentational-and-container-components) that loads a reducer, epic and dispatches an action, when user navigates to the page with that component.
+
+```js
+import { compose } from 'redux'
+import { connect } from 'react-redux'
+import { injectReducer, injectEpic, withAction } from 'react-observatory'
+import reducer from './reducers'
+import Blog from './Blog'
+import epic from './epics'
+
+function mapStateToProps(state) {
+  return {
+    blog: state.blog,
+  };
+}
+
+const mapDispatchToProps = { up: () => ({ type: 'Up100' }) }
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps)
+
+const withReducer = injectReducer({ key: 'blog', reducer })
+
+const withEpic = injectEpic(epic)
+
+export default compose(
+  withReducer,
+  withEpic,
+  withAction('RouterActions.Blog'),
+  withConnect
+)(Blog)
+```
+
 ## Thanks
 
 * [redux](https://redux.js.org/) for enabling better architectures.

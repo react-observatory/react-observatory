@@ -10,11 +10,11 @@ Code-splitting with reducers and [sagas](https://redux-saga.js.org/) is implemen
 
 React Observatory is intender to be used in the conjunction with libraries such as:
 
-- react
-- redux
-- redux-observable
-- rxjs
-- react-router
-- react-loadable
+- [React](https://reactjs.org/)
+- [React Router](https://reacttraining.com/react-router/)
+- [React Loadable](https://github.com/jamiebuilds/react-loadable)
+- [Redux](https://redux.js.org/)
+- [Redux Observable](https://redux-observable.js.org/)
+- [RxJS](http://reactivex.io/rxjs/)
 
 Due to the composable nature of [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html) it's possible to apply React Observatory in other scenarios which will not be covered in this documentation.
