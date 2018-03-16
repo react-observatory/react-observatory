@@ -32,21 +32,19 @@ export { epic$, rootEpic };
 ### `./src/configureStore`
 
 ```js
-import { createStore, applyMiddleware } from 'redux';
-import { applyAsyncReducers, applyAsyncEpics } from 'react-observatory';
+import { createStore, compose, applyMiddleware } from 'redux';
+import { applyAsyncEpics } from 'react-observatory';
 import { createEpicMiddleware } from 'redux-observable';
-import composeEnhancers from './utils/composeEnhancers';
-import reducerCreator from './reducers';
+import reducers from './reducers';
 import { rootEpic, epic$ } from './epics';
 
 const epicMiddleware = createEpicMiddleware(rootEpic);
 
 export default function configureStore(initialState = {}) {
   const store = createStore(
-    reducerCreator(),
+    reducers,
     initialState,
-    composeEnhancers(
-      applyAsyncReducers(reducerCreator),
+    compose(
       applyAsyncEpics(epic$),
       applyMiddleware(epicMiddleware)
     )

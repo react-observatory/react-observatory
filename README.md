@@ -6,7 +6,7 @@ A library to provide you with tooling and knowledge about building your React Re
 
 ## Prerequisites
 
-React Observatory can be used to it's full potential in projects that already employ [redux,](https://github.com/reactjs/redux) [redux-observable](https://github.com/redux-observable/redux-observable/) and [react-loadable](https://github.com/jamiebuilds/react-loadable) or any other way for code-splitting.
+React Observatory can be used to it's full potential in projects that employ [react-router@4.x](https://github.com/ReactTraining/react-router), [redux,](https://github.com/reactjs/redux) [redux-observable](https://github.com/redux-observable/redux-observable/) and [react-loadable](https://github.com/jamiebuilds/react-loadable) or any other way for code-splitting.
 
 ## Installation
 
