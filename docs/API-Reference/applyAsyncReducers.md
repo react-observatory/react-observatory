@@ -4,8 +4,10 @@ A function that takes a reducer creator, created with [composeReducerCreator](/d
 
 #### Arguments
 
-1. reducerCreator (`Function`): a function that accepts an object with reducers and 
+1. reducerCreator (`Function`): A function that accepts an object with reducers and 
 
 #### Returns
+
+(*`Function`*): A store enhancer that is used as an argument for [createStore.](https://redux.js.org/api-reference/createstore) to enable dynamic Reducer injection.
 
 #### Example

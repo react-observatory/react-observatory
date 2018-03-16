@@ -12,4 +12,6 @@ The Reducer stays in the runtime after component is unmounted.
 
 #### Returns
 
+(*`Function`*): A [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html) function that accepts a React Component.
+
 #### Example

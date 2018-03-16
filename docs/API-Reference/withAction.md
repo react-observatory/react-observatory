@@ -12,4 +12,6 @@ The action will receive the [location](https://reacttraining.com/react-router/we
 
 #### Returns
 
+(*`Function`*): A [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html) function that enables us to dispatch an [Action,](https://redux.js.org/basics/actions) when Component is mounted.
+
 #### Example

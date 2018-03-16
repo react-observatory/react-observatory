@@ -8,4 +8,6 @@ A function that takes a stream of [Epics](https://redux-observable.js.org/docs/b
 
 #### Returns
 
+(*`Function`*): (*`Function`*): A store enhancer that is used as an argument for [createStore.](https://redux.js.org/api-reference/createstore) to enable dynamic Epic injection.
+
 #### Example
