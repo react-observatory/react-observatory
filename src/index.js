@@ -1,6 +1,6 @@
 import injectEpic from './injectEpic';
 import injectReducer from './injectReducer';
-import withAction from './withAction';
+import withRouterAction from './withRouterAction';
 import applyAsyncEpics from './applyAsyncEpics';
 import applyAsyncReducers from './applyAsyncReducers';
 import composeReducerCreator from './composeReducerCreator';
@@ -9,7 +9,7 @@ import createRootEpic from './createRootEpic';
 export {
   injectEpic,
   injectReducer,
-  withAction,
+  withRouterAction,
   applyAsyncEpics,
   applyAsyncReducers,
   composeReducerCreator,

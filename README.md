@@ -23,7 +23,7 @@ Here's an example of [Container Component](https://redux.js.org/basics/usage-wit
 ```js
 import { compose } from 'redux'
 import { connect } from 'react-redux'
-import { injectReducer, injectEpic, withAction } from 'react-observatory'
+import { injectReducer, injectEpic, withRouterAction } from 'react-observatory'
 import reducer from './reducers'
 import Blog from './Blog'
 import epic from './epics'
@@ -45,7 +45,7 @@ const withEpic = injectEpic(epic)
 export default compose(
   withReducer,
   withEpic,
-  withAction('RouterActions.Blog'),
+  withRouterAction('RouterActions.Blog'),
   withConnect
 )(Blog)
 ```

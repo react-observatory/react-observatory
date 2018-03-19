@@ -6,4 +6,4 @@ API Reference
 * [createRootEpic](/docs/API-Reference/createRootEpic.md)
 * [injectEpic](/docs/API-Reference/injectEpic.md)
 * [injectReducer](/docs/API-Reference/injectReducer.md)
-* [withAction](/docs/API-Reference/withAction.md)
+* [withRouterAction](/docs/API-Reference/withRouterAction.md)
