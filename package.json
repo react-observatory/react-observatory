@@ -26,7 +26,8 @@
     "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
     "prepare": "npm run clean && npm run format:check && npm run lint && npm test && npm run build",
     "examples:lint": "eslint examples",
-    "examples:test": "cross-env CI=true babel-node examples/testAll.js"
+    "examples:test": "cross-env CI=true babel-node examples/testAll.js",
+    "precommit": "lint-staged"
   },
   "peerDependencies": {
     "redux": "^3.7.2",
@@ -84,7 +85,9 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
+    "husky": "^0.14.3",
     "jest": "^22.4.2",
+    "lint-staged": "^7.0.0",
     "prettier": "^1.11.1",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
@@ -99,5 +102,11 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^3.0.0",
     "rxjs": "^5.5.6"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
