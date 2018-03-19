@@ -1,7 +1,6 @@
 import conformsTo from 'lodash.conformsto';
 import isFunction from 'lodash.isfunction';
 import isObject from 'lodash.isobject';
-import isArray from 'lodash.isarray';
 import invariant from 'invariant';
 import {
   CREATE_REDUCER_SYMBOL,
@@ -43,7 +42,7 @@ export function checkStoreWithAsyncEpics(store) {
     subscribe: isFunction,
     getState: isFunction,
     replaceReducer: isFunction,
-    [INJECTED_EPICS_PROPERTY]: isArray
+    [INJECTED_EPICS_PROPERTY]: Array.isArray
   };
 
   invariant(
