@@ -5,8 +5,8 @@
 import {
   checkStoreWithAsyncReducers,
   checkStoreWithAsyncEpics
-} from '../src/checkStore';
-import { CREATE_REDUCER_SYMBOL, EPICS_STREAM_SYMBOL } from '../src/constants';
+} from '../checkStore';
+import { CREATE_REDUCER_SYMBOL, EPICS_STREAM_SYMBOL } from '../constants';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 describe('checkStore', () => {
