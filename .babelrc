@@ -26,7 +26,12 @@
             "loose": true
           }
         ]
-      ]
+      ],
+      "plugins": [
+        "transform-object-rest-spread",
+        "transform-class-properties",
+        "transform-react-jsx"
+      ],
     }
   }
 }
