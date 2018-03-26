@@ -49,7 +49,7 @@ import { injectReducer } from 'react-observatory'
 import taskListReducer from './reducers'
 import TaskList from './TaskList'
 
-const withReducer = injectReducer({ key: 'taskList', taskListReducer })
+const withReducer = injectReducer('taskList', taskListReducer)
 
 export default withReducer(TaskList)
 ```

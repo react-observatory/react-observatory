@@ -1,12 +1,16 @@
-# `injectReducer({ key, reducer })`
+# `injectReducer(key, reducer)`
 
 [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html) for injecting Reducers asynchronously.
+
+The Reducer with a duplicate `key` will be ignored.
 
 The Reducer stays in the runtime after component is unmounted.
 
 #### Arguments
 
-1. `{ key, reducer }` (*`Object`*): Aobject with a string `key` to identify the reducer and a [reducer](https://redux.js.org/basics/reducers) function to be injected.
+1. `key` (*`String`*): A string `key` to identify the reducer in the [State.](https://redux.js.org/glossary#state)
+
+2. `reducer` (*`Function`*): A [reducer](https://redux.js.org/basics/reducers) function to be injected.
 
 #### Returns
 
@@ -27,7 +31,7 @@ function mapStateToProps({ blog }) {
   }
 }
 
-const withReducer = injectReducer({ key: 'blog', reducer })
+const withReducer = injectReducer('blog', reducer)
 
 export default compose(
   withReducer,
