@@ -12,7 +12,15 @@ import getInjectors from './reducerInjectors';
  * @param {function} reducer A reducer that will be injected
  *
  */
-export default ({ key, reducer }) => WrappedComponent => {
+
+/**
+ * High-Order Component that dynamically injects a reducer.
+ *
+ * @param key {string} A key of the reducer
+ * @param reducer {function} reducer A reducer that will be injected
+ * @return {function(*)} HOC with a reducer.
+ */
+export default (key, reducer) => WrappedComponent => {
   class ReducerInjector extends Component {
     static WrappedComponent = WrappedComponent;
     static contextTypes = {

@@ -1,4 +1,4 @@
-import { CREATE_REDUCER_SYMBOL } from './constants';
+import { REDUCER_CREATOR_SYMBOL } from './constants';
 
 /**
  * A store enhancer that enables dynamic injection of reducers.
@@ -13,7 +13,7 @@ export default function applyAsyncReducers(createReducer) {
       ...store,
       injectedReducers: {},
       // Hide the implementation details under a Symbol.
-      [CREATE_REDUCER_SYMBOL]: createReducer
+      [REDUCER_CREATOR_SYMBOL]: createReducer
     };
   };
 }

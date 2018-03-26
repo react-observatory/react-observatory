@@ -3,7 +3,7 @@ import isFunction from 'lodash.isfunction';
 import isObject from 'lodash.isobject';
 import invariant from 'invariant';
 import {
-  CREATE_REDUCER_SYMBOL,
+  REDUCER_CREATOR_SYMBOL,
   INJECTED_EPICS_PROPERTY,
   EPICS_STREAM_SYMBOL
 } from './constants';
@@ -20,7 +20,7 @@ export function checkStoreWithAsyncReducers(store) {
     injectedReducers: isObject
   };
   invariant(
-    conformsTo(store, shape) && isFunction(store[CREATE_REDUCER_SYMBOL]),
+    conformsTo(store, shape) && isFunction(store[REDUCER_CREATOR_SYMBOL]),
     '(react-observatory) injectReducer: Expected a valid redux store'
   );
 }
