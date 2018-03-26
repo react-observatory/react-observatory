@@ -18,9 +18,10 @@ const reducer = identity;
 // Dummy reducer to supress redux warnings.
 const dummyReducer = () => ({});
 
-const mockStore = () => createStore(() => ({
-  dummyReducer
-}));
+const mockStore = () =>
+  createStore(() => ({
+    dummyReducer
+  }));
 
 describe('injectReducer decorator', () => {
   let store;
