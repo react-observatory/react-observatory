@@ -15,12 +15,6 @@ if (env === 'es' || env === 'cjs') {
   config.output = { format: env };
   config.external.push(
     'hoist-non-react-statics',
-    'lodash.conformsto',
-    'lodash.isfunction',
-    'lodash.isobject',
-    'lodash.isarray',
-    'lodash.isstring',
-    'lodash.isempty',
     'invariant',
     'rxjs/BehaviorSubject',
     'rxjs/operator/mergeMap'
@@ -30,6 +24,12 @@ if (env === 'es' || env === 'cjs') {
       plugins: ['external-helpers']
     })
   );
+}
+
+if (env === 'es') {
+  config.external.push('lodash-es');
+} else if (env === 'cjs') {
+  config.external.push('lodash');
 }
 
 if (env === 'development' || env === 'production') {
