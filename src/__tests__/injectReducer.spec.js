@@ -6,7 +6,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import identity from 'lodash/identity';
 
-import configureStore from 'redux-mock-store';
+import { createStore } from 'redux';
 import injectReducer from '../injectReducer';
 import * as reducerInjectors from '../reducerInjectors';
 
@@ -15,7 +15,12 @@ const Component = () => null;
 
 const reducer = identity;
 
-const mockStore = configureStore();
+// Dummy reducer to supress redux warnings.
+const dummyReducer = () => ({});
+
+const mockStore = () => createStore(() => ({
+  dummyReducer
+}));
 
 describe('injectReducer decorator', () => {
   let store;

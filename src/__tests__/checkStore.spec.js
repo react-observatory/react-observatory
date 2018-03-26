@@ -6,7 +6,7 @@ import {
   checkStoreWithAsyncReducers,
   checkStoreWithAsyncEpics
 } from '../checkStore';
-import { CREATE_REDUCER_SYMBOL, EPICS_STREAM_SYMBOL } from '../constants';
+import { REDUCER_CREATOR_SYMBOL, EPICS_STREAM_SYMBOL } from '../constants';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 describe('checkStore', () => {
@@ -20,7 +20,7 @@ describe('checkStore', () => {
         getState: () => {},
         replaceReducer: () => {},
         injectedReducers: {},
-        [CREATE_REDUCER_SYMBOL]: () => {}
+        [REDUCER_CREATOR_SYMBOL]: () => {}
       };
     });
 
@@ -31,7 +31,10 @@ describe('checkStore', () => {
     it('should throw if passed invalid store shape for injecting reducers', () => {
       expect(() => checkStoreWithAsyncReducers({})).toThrow();
       expect(() =>
-        checkStoreWithAsyncReducers({ ...store, [CREATE_REDUCER_SYMBOL]: null })
+        checkStoreWithAsyncReducers({
+          ...store,
+          [REDUCER_CREATOR_SYMBOL]: null
+        })
       ).toThrow();
       expect(() =>
         checkStoreWithAsyncReducers({ ...store, injectedReducers: null })
