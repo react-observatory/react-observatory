@@ -7,5 +7,4 @@ export { default as createRootEpic } from './createRootEpic';
 // HOCs.
 export { default as injectEpic } from './injectEpic';
 export { default as injectReducer } from './injectReducer';
-export { default as withAction } from './withAction';
 export { default as withRouterAction } from './withRouterAction';
