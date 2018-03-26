@@ -1,6 +1,4 @@
-import conformsTo from 'lodash.conformsto';
-import isFunction from 'lodash.isfunction';
-import isObject from 'lodash.isobject';
+import { conformsTo, isFunction, isObject } from 'lodash';
 import invariant from 'invariant';
 import {
   REDUCER_CREATOR_SYMBOL,
