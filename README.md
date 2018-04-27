@@ -1,5 +1,7 @@
 # React Observatory
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/halfzebra/react-observatory.svg)](https://greenkeeper.io/)
+
 A library to provide you with tooling and knowledge about building your React Redux Architecture around code-splitting.
 
 [![Build Status](https://travis-ci.org/halfzebra/react-observatory.svg?branch=master)](https://travis-ci.org/halfzebra/react-observatory) [![npm version](https://badge.fury.io/js/react-observatory.svg)](https://badge.fury.io/js/react-observatory)
