@@ -1,4 +1,4 @@
-# React Observatory
+# 🔭 React Observatory
 
 A library to provide you with tooling and knowledge about building your React Redux Architecture around code-splitting.
 
