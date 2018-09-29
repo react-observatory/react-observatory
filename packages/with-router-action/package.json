@@ -1,0 +1,91 @@
+{
+  "name": "@react-observatory/with-router-action",
+  "version": "0.1.0",
+  "description": "Dynamic reducer and epic injection for Redux Observable apps",
+  "main": "dist/@react-observatory/with-router-action.cjs.js",
+  "module": "dist/@react-observatory/with-router-action.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/halfzebra/react-observatory"
+  },
+  "bugs": {
+    "url": "https://github.com/halfzebra/react-observatory/issues"
+  },
+  "keywords": [
+    "redux",
+    "reducer",
+    "state",
+    "functional",
+    "observable",
+    "stream",
+    "rxjs"
+  ],
+  "author": "Eduard Kyvenko <eduard.kyvenko@gmail.com> (https://github.com/halfzebra)",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src"
+  ],
+  "scripts": {
+    "build": "../../node_modules/.bin/kcd-scripts build --bundle"
+  },
+  "peerDependencies": {
+    "redux": "^3.7.2",
+    "react": "^16.2.0"
+  },
+  "optionalDependencies": {
+    "redux-observable": "^0.18.0",
+    "react-router": "^4.2.0",
+    "rxjs": "^5.5.6"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.0.0-rc.1",
+    "prop-types": ">=15",
+    "hoist-non-react-statics": "^2.5.0",
+    "invariant": "^2.2.3",
+    "lodash": "^4.17.5",
+    "lodash-es": "^4.17.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-rc.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0-rc.1",
+    "@babel/plugin-transform-runtime": "^7.0.0-rc.1",
+    "@babel/polyfill": "^7.0.0-rc.1",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/preset-flow": "^7.0.0-rc.1",
+    "@babel/preset-react": "^7.0.0-rc.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "cross-env": "^5.1.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "eslint": "^4.17.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
+    "husky": "^0.14.3",
+    "jest": "^22.4.2",
+    "lerna": "^3.4.0",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-observable": "^0.18.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^4.0.0-beta.8",
+    "rollup-plugin-commonjs": "^9.1.4",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify": "^4.0.0",
+    "rxjs": "^5.5.6",
+    "semantic-release": "15.6.3",
+    "semantic-release-monorepo": "^6.0.1"
+  }
+}

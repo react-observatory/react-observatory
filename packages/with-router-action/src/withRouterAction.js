@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import getInjectors from './epicInjectors';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 
 /**
@@ -11,7 +10,7 @@ import hoistNonReactStatics from 'hoist-non-react-statics';
  */
 export default function withRouterAction(action) {
   return WrappedComponent => {
-    class InjectEpic extends React.Component {
+    class WithRouterAction extends React.Component {
       static WrappedComponent = WrappedComponent;
       static contextTypes = {
         store: PropTypes.object.isRequired
@@ -43,6 +42,6 @@ export default function withRouterAction(action) {
       }
     }
 
-    return hoistNonReactStatics(InjectEpic, WrappedComponent);
+    return hoistNonReactStatics(WithRouterAction, WrappedComponent);
   };
 }

@@ -1,27 +1,7 @@
-import { conformsTo, isFunction, isObject } from 'lodash';
+import conformsTo from 'lodash/conformsTo';
+import isFunction from 'lodash/isFunction';
 import invariant from 'invariant';
-import {
-  REDUCER_CREATOR_SYMBOL,
-  INJECTED_EPICS_PROPERTY,
-  EPICS_STREAM_SYMBOL
-} from './constants';
-
-/**
- * Validate the shape of redux store for dynamic reducer injection.
- */
-export function checkStoreWithAsyncReducers(store) {
-  const shape = {
-    dispatch: isFunction,
-    subscribe: isFunction,
-    getState: isFunction,
-    replaceReducer: isFunction,
-    injectedReducers: isObject
-  };
-  invariant(
-    conformsTo(store, shape) && isFunction(store[REDUCER_CREATOR_SYMBOL]),
-    '(react-observatory) injectReducer: Expected a valid redux store'
-  );
-}
+import { INJECTED_EPICS_PROPERTY, EPICS_STREAM_SYMBOL } from './constants';
 
 const checkEpicStream = stream => {
   invariant(
