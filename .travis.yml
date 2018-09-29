@@ -3,7 +3,11 @@ node_js:
   - "stable"
   - "lts/*"
 
-script: yarn test
+before_script:
+  - npm run bootstrap
+  - npm run build
+
+script: npm test
 
 cache:
   yarn: true
