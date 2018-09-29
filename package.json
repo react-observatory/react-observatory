@@ -12,6 +12,8 @@
     "precommit": "lint-staged"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^2.0.0",
+    "@semantic-release/git": "^6.0.0",
     "husky": "^0.14.3",
     "kcd-scripts": "^0.44.0",
     "lerna": "^3.4.0",
