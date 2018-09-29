@@ -16,9 +16,7 @@
     "reducer",
     "state",
     "functional",
-    "observable",
-    "stream",
-    "rxjs"
+    "observable"
   ],
   "author": "Eduard Kyvenko <eduard.kyvenko@gmail.com> (https://github.com/halfzebra)",
   "license": "MIT",
@@ -35,24 +33,17 @@
     "redux": "^3.7.2",
     "react": "^16.2.0"
   },
-  "optionalDependencies": {
-    "redux-observable": "^0.18.0",
-    "react-router": "^4.2.0",
-    "rxjs": "^5.5.6"
-  },
   "dependencies": {
     "prop-types": ">=15",
     "hoist-non-react-statics": "^2.5.0",
     "invariant": "^2.2.3",
-    "lodash": "^4.17.5",
-    "lodash-es": "^4.17.7"
+    "lodash": "^4.17.5"
   },
   "devDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "redux-observable": "^0.18.0",
     "rxjs": "^5.5.6"
   }
 }
