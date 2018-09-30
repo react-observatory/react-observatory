@@ -11,6 +11,9 @@
   "bugs": {
     "url": "https://github.com/halfzebra/react-observatory/issues"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "redux",
     "reducer",

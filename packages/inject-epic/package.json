@@ -11,6 +11,9 @@
   "bugs": {
     "url": "https://github.com/react-observatory/react-observatory/issues"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "redux",
     "state",

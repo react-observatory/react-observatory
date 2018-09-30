@@ -8,9 +8,6 @@
     "type": "git",
     "url": "https://github.com/halfzebra/react-observatory"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "bugs": {
     "url": "https://github.com/halfzebra/react-observatory/issues"
   },
@@ -21,6 +18,9 @@
     "functional",
     "observable"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Eduard Kyvenko <eduard.kyvenko@gmail.com> (https://github.com/halfzebra)",
   "license": "MIT",
   "files": [
