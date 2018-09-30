@@ -23,8 +23,6 @@ export default function withRouterAction(action) {
         WrappedComponent.name ||
         'Component'})`;
 
-      injectors = getInjectors(this.context.store);
-
       componentWillMount() {
         const { location, match } = this.props;
 
