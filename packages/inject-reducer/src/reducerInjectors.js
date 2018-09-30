@@ -1,6 +1,8 @@
 import invariant from 'invariant';
-import { isEmpty, isFunction, isString } from 'lodash';
-import { checkStoreWithAsyncReducers } from './checkStore';
+import isEmpty from 'lodash/isEmpty';
+import isFunction from 'lodash/isFunction';
+import isString from 'lodash/isString';
+import { checkStoreWithAsyncReducers } from './checkStoreWithAsyncReducers';
 import { REDUCER_CREATOR_SYMBOL } from './constants';
 
 /**

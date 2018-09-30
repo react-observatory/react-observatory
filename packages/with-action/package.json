@@ -1,0 +1,51 @@
+{
+  "name": "@react-observatory/with-action",
+  "version": "0.1.0",
+  "description": "Dynamic reducer and epic injection for Redux Observable apps",
+  "main": "dist/@react-observatory/with-action.cjs.js",
+  "module": "dist/@react-observatory/with-action.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-observatory/react-observatory"
+  },
+  "bugs": {
+    "url": "https://github.com/react-observatory/react-observatory/issues"
+  },
+  "keywords": [
+    "redux",
+    "reducer",
+    "state",
+    "functional",
+    "observable"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Eduard Kyvenko <eduard.kyvenko@gmail.com> (https://github.com/halfzebra)",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src"
+  ],
+  "scripts": {
+    "build": "BUILD_NAME=react-observatory-with-action ../../node_modules/.bin/kcd-scripts build --bundle"
+  },
+  "peerDependencies": {
+    "redux": "^3.7.2",
+    "react": "^16.2.0"
+  },
+  "dependencies": {
+    "prop-types": ">=15",
+    "hoist-non-react-statics": "^2.5.0",
+    "invariant": "^2.2.3",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2"
+  }
+}

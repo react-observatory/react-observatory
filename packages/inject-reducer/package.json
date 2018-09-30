@@ -1,0 +1,59 @@
+{
+  "name": "@react-observatory/inject-reducer",
+  "version": "0.1.0",
+  "description": "Dynamic reducer injection for Redux apps",
+  "main": "dist/@react-observatory/inject-reducer.cjs.js",
+  "module": "dist/@react-observatory/inject-reducer.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-observatory/react-observatory"
+  },
+  "bugs": {
+    "url": "https://github.com/react-observatory/react-observatory/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "redux",
+    "reducer",
+    "state",
+    "functional"
+  ],
+  "author": "Eduard Kyvenko <eduard.kyvenko@gmail.com> (https://github.com/halfzebra)",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "test": "../../node_modules/.bin/kcd-scripts test --no-watch",
+    "build": "../../node_modules/.bin/kcd-scripts build --bundle"
+  },
+  "peerDependencies": {
+    "redux": "^3.7.2",
+    "react": "^16.2.0"
+  },
+  "optionalDependencies": {
+    "redux-observable": "^0.18.0",
+    "react-router": "^4.2.0",
+    "rxjs": "^5.5.6"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.0.0-rc.1",
+    "prop-types": ">=15",
+    "hoist-non-react-statics": "^2.5.0",
+    "invariant": "^2.2.3",
+    "lodash": "^4.17.5",
+    "lodash-es": "^4.17.7"
+  },
+  "devDependencies": {
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-observable": "^0.18.0"
+  }
+}

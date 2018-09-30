@@ -16,7 +16,7 @@ const Component = () => null;
 const reducer = identity;
 
 // Dummy reducer to supress redux warnings.
-const dummyReducer = () => ({});
+const dummyReducer = identity;
 
 const mockStore = () =>
   createStore(() => ({
@@ -60,6 +60,8 @@ describe('injectReducer decorator', () => {
     const renderedComponent = shallow(<ComponentWithReducer {...props} />, {
       context: { store }
     });
+
+    console.log(renderedComponent);
 
     expect(renderedComponent.prop('testProp')).toBe('test');
   });
