@@ -6,10 +6,10 @@
   "module": "dist/@react-observatory/with-router-action.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/halfzebra/react-observatory"
+    "url": "https://github.com/react-observatory/react-observatory"
   },
   "bugs": {
-    "url": "https://github.com/halfzebra/react-observatory/issues"
+    "url": "https://github.com/react-observatory/react-observatory/issues"
   },
   "publishConfig": {
     "access": "public"

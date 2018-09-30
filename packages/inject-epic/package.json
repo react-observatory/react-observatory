@@ -6,7 +6,7 @@
   "module": "dist/@react-observatory/inject-epic.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/halfzebra/react-observatory"
+    "url": "https://github.com/react-observatory/react-observatory"
   },
   "bugs": {
     "url": "https://github.com/react-observatory/react-observatory/issues"
