@@ -3,12 +3,11 @@ node_js:
   - "stable"
   - "lts/*"
 
+cache:
+  directories: node_modules
+
 before_script:
   - npm run bootstrap -- --no-ci
   - npm run build
 
 script: npm test
-
-cache:
-  yarn: true
-  directories: node_modules
