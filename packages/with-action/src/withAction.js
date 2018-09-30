@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 
 /**
@@ -14,6 +15,9 @@ export default function withAction(action) {
       static displayName = `withAction(${WrappedComponent.displayName ||
         WrappedComponent.name ||
         'Component'})`;
+      static contextTypes = {
+        store: PropTypes.object.isRequired
+      };
 
       componentWillMount() {
         if (typeof action === 'string') {
