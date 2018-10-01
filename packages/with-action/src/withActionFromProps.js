@@ -21,7 +21,7 @@ export default function withActionFormProps(actionCreator, propTypes) {
       };
 
       componentWillMount() {
-        this.context.store.dispatch(this.props);
+        this.context.store.dispatch(actionCreator(this.props));
       }
 
       render() {
