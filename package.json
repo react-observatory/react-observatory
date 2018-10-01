@@ -6,7 +6,7 @@
     "test": "lerna run test",
     "build": "lerna run build",
     "bootstrap": "lerna bootstrap",
-    "release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo",
+    "release": "lerna exec --concurrency 1 -- semantic-release --dry-run -e semantic-release-monorepo",
     "examples:lint": "eslint examples",
     "examples:test": "cross-env CI=true babel-node examples/testAll.js",
     "precommit": "lint-staged"
