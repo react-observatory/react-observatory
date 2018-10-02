@@ -33,12 +33,7 @@ import reducer from './reducers'
 import Blog from './Blog'
 import epic from './epics'
 
-function mapStateToProps(state) {
-  return {
-    blog: state.blog,
-  };
-}
-
+const mapStateToProps = ({ blog }) => ({ blog })
 const mapDispatchToProps = { up: () => ({ type: 'Up100' }) }
 const withConnect = connect(mapStateToProps, mapDispatchToProps)
 const withReducer = injectReducer('blog', reducer)
