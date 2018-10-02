@@ -10,10 +10,13 @@ React Observatory can be used to it's full potential in projects that employ [re
 
 ## Installation
 
-To install the stable version:
+To install the stable versions:
 
 ```
-npm install --save react-observatory
+npm install --save @react-observatory/inject-epic
+npm install --save @react-observatory/inject-reducer
+npm install --save @react-observatory/with-action
+npm install --save @react-observatory/with-router-action
 ```
 
 ## The Gist
@@ -23,7 +26,9 @@ Here's an example of [Container Component](https://redux.js.org/basics/usage-wit
 ```js
 import { compose } from 'redux'
 import { connect } from 'react-redux'
-import { injectReducer, injectEpic, withRouterAction } from 'react-observatory'
+import { injectReducer } from '@react-observatory/inject-reducer'
+import { injectEpic } from '@react-observatory/inject-epic'
+import { withRouterAction } from '@react-observatory/with-router-action'
 import reducer from './reducers'
 import Blog from './Blog'
 import epic from './epics'
@@ -35,11 +40,8 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = { up: () => ({ type: 'Up100' }) }
-
 const withConnect = connect(mapStateToProps, mapDispatchToProps)
-
-const withReducer = injectReducer({ key: 'blog', reducer })
-
+const withReducer = injectReducer('blog', reducer)
 const withEpic = injectEpic(epic)
 
 export default compose(

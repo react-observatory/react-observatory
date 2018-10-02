@@ -17,7 +17,7 @@ The reducer creator is only required for setting-up the store.
 ### `./src/reducers`
 
 ```js
-import { composeReducerCreator } from 'react-observatory'
+import { composeReducerCreator } from '@react-observatory/inject-reducer'
 
 const counter = (state = 0, action) => {
   if (action.type === 'Up') {

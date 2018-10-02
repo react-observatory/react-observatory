@@ -14,7 +14,7 @@ A function that takes a reducer creator, created with [composeReducerCreator](/d
 
 ```js
 import { createStore } from 'redux'
-import { applyAsyncReducers } from 'react-observatory'
+import { applyAsyncReducers } from '@react-observatory/inject-reducer'
 import reducerCreator from './reducers'
 
 export default function configureStore(initialState = {}) {

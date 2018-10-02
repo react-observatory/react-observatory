@@ -15,7 +15,7 @@ A helper for creating a root epic and a stream of epics that enables [adding new
 ### `./src/epics`
 
 ```js
-import { createRootEpic } from 'react-observatory'
+import { createRootEpic } from '@react-observatory/inject-reducer'
 
 const logger = action$ =>
   action$

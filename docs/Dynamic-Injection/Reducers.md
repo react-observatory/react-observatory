@@ -11,7 +11,7 @@ First, we need to create a function that will allow us to inject new reducers dy
 In this example, the `counter` reducer will be available on every page.
 
 ```js
-import { composeReducerCreator } from 'react-observatory'
+import { composeReducerCreator } from '@react-observatory/inject-reducer'
 
 const counter = (state = 0, action) => {
   return state + 1;
@@ -30,7 +30,7 @@ It needs the `reducerCreator` to replace the old reducer with an updated one whe
 
 ```js
 import { createStore } from 'redux'
-import { applyAsyncReducers } from 'react-observatory'
+import { applyAsyncReducers } from '@react-observatory/inject-reduers'
 import reducerCreator from './reducers'
 
 const store = createStore(
@@ -45,7 +45,7 @@ const store = createStore(
 Now we can start injecting reducers dynamically, the reducer for `TaskList` component will be loaded along with React Component.
 
 ```js
-import { injectReducer } from 'react-observatory'
+import { injectReducer } from '@react-observatory/inject-reducer'
 import taskListReducer from './reducers'
 import TaskList from './TaskList'
 

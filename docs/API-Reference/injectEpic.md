@@ -17,7 +17,7 @@ The Epic stays in the runtime after component is unmounted.
 #### `containers/Blog/index.js`
 
 ```js
-import { injectEpic } from 'react-observatory'
+import { injectEpic } from '@react-observatory/inject-epic'
 import epic from './epics'
 import Blog from './Blog'
 
@@ -32,7 +32,7 @@ export default withEpic(Blog)
 ```js
 import { compose } from 'redux'
 import { connect } from 'react-redux'
-import { injectEpic } from 'react-observatory'
+import { injectEpic } from '@react-observatory/inject-epic'
 import Blog from './Blog'
 import epic from './epics'
 

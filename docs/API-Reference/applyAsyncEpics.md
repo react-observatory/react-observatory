@@ -15,7 +15,7 @@ A function that takes a stream of [Epics](https://redux-observable.js.org/docs/b
 ### `./src/epics`
 
 ```js
-import { createRootEpic } from 'react-observatory'
+import { createRootEpic } from '@react-observatory/inject-epic'
 
 const logger = action$ =>
   action$
@@ -33,7 +33,7 @@ export { epic$, rootEpic }
 
 ```js
 import { createStore, compose, applyMiddleware } from 'redux'
-import { applyAsyncEpics } from 'react-observatory'
+import { applyAsyncEpics } from '@react-observatory/inject-epic'
 import { createEpicMiddleware } from 'redux-observable'
 import reducers from './reducers'
 import { rootEpic, epic$ } from './epics'

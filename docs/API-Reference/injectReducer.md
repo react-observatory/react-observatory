@@ -21,7 +21,9 @@ The Reducer stays in the runtime after component is unmounted.
 ```js
 import { compose } from 'redux'
 import { connect } from 'react-redux'
-import { injectReducer, injectEpic, withRouterAction } from 'react-observatory'
+import { injectEpic } from '@react-observatory/inject-epic'
+import { injectReducer } from '@react-observatory/inject-reducer'
+import { withRouterAction } from '@react-observatory/with-router-action'
 import reducer from './reducers'
 import Blog from './Blog'
 
