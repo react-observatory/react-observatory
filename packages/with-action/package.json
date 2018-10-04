@@ -11,6 +11,10 @@
   "bugs": {
     "url": "https://github.com/react-observatory/react-observatory/issues"
   },
+  "homepage": "https://react-observatory.js.org/",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "redux",
     "reducer",
@@ -18,9 +22,6 @@
     "functional",
     "observable"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "author": "Eduard Kyvenko <eduard.kyvenko@gmail.com> (https://github.com/halfzebra)",
   "license": "MIT",
   "files": [

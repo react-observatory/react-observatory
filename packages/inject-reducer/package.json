@@ -11,6 +11,7 @@
   "bugs": {
     "url": "https://github.com/react-observatory/react-observatory/issues"
   },
+  "homepage": "https://react-observatory.js.org/",
   "publishConfig": {
     "access": "public"
   },
