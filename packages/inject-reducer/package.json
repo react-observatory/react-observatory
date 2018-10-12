@@ -32,8 +32,8 @@
     "build": "../../node_modules/.bin/kcd-scripts build --bundle"
   },
   "peerDependencies": {
-    "redux": "^3.7.2",
-    "react": "^16.2.0"
+    "redux": ">=3 <5",
+    "react": ">=16"
   },
   "dependencies": {
     "@babel/runtime": "7.0.0-rc.1",
