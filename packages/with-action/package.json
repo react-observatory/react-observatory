@@ -39,15 +39,11 @@
   },
   "dependencies": {
     "prop-types": ">=15",
-    "hoist-non-react-statics": "^2.5.0",
-    "invariant": "^2.2.3",
-    "lodash": "^4.17.5"
     "recompose": "^0.30.0"
   },
   "devDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2",
     "redux": "^3.7.2"
   }
 }
