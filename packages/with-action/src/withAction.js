@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
  */
 export default function withAction(action) {
   return BaseComponent => {
-    const factory = createFactory(WrappedComponent);
+    const factory = createFactory(BaseComponent);
     class WithAction extends React.Component {
       static contextTypes = {
         store: PropTypes.object.isRequired
@@ -36,6 +36,6 @@ export default function withAction(action) {
       );
     }
 
-    return WrappedComponent;
+    return WithAction;
   };
 }

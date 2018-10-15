@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { createFactory } from 'react';
 import PropTypes from 'prop-types';
-import hoistNonReactStatics from 'hoist-non-react-statics';
+import { setDisplayName, wrapDisplayName, setStatic, compose } from 'recompose';
 
 /**
  * High-Order Component that enables you to emit an action on componentWillMount.
@@ -9,13 +9,9 @@ import hoistNonReactStatics from 'hoist-non-react-statics';
  * @return {function(*)} HOC factory that enables the component to emit an action on componentWillMount.
  */
 export default function withActionFormProps(actionCreator, propTypes) {
-  return WrappedComponent => {
+  return BaseComponent => {
+    const factory = createFactory(BaseComponent);
     class WithActionFromProps extends React.Component {
-      static WrappedComponent = WrappedComponent;
-      static propTypes = propTypes;
-      static displayName = `withActionFromProps(${WrappedComponent.displayName ||
-        WrappedComponent.name ||
-        'Component'})`;
       static contextTypes = {
         store: PropTypes.object.isRequired
       };
@@ -25,10 +21,16 @@ export default function withActionFormProps(actionCreator, propTypes) {
       }
 
       render() {
-        return <WrappedComponent {...this.props} />;
+        return factory(this.props);
       }
     }
 
-    return hoistNonReactStatics(WithActionFromProps, WrappedComponent);
+    if (process.env.NODE_ENV !== 'production') {
+      return setDisplayName(wrapDisplayNam(BaseComponent, 'withAction'))(
+        WithActionFromProps
+      );
+    }
+
+    return WithActionFromProps;
   };
 }
