@@ -1,6 +1,6 @@
 # `withRouterAction(action)`
 
-[Higher-Order Components](https://reactjs.org/docs/higher-order-components.html) for dispatching an action, when asynchronously loaded component is about to mount.
+[Higher-Order Components](https://reactjs.org/docs/higher-order-components.html) for dispatching an action with the data from the router context, when the route is matched and corresponding component is about to mount.
 
 The action will receive the [location](https://reacttraining.com/react-router/web/api/location) and the [match](https://reacttraining.com/react-router/web/api/match) from [react-router.](https://github.com/ReactTraining/react-router)
 
@@ -22,5 +22,6 @@ The action will receive the [location](https://reacttraining.com/react-router/we
 import { withRouterAction } from '@react-observatory/with-router-action'
 import About from './About'
 
+// It's nice to prefix the Actions, so it's easy to recognize them in the DevTool.
 export default withRouterAction('RouterAction.About')(About)
 ```
