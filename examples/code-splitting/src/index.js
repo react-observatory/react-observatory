@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './vendor';
 import configureStore from './configureStore';
-import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import HomePage from './containers/Home';
 import About from './containers/About/Loadable';
@@ -28,4 +27,4 @@ class AppRoot extends Component {
 
 ReactDOM.render(<AppRoot />, document.getElementById('root'));
 
-registerServiceWorker();
+// registerServiceWorker();

@@ -1,4 +1,4 @@
-import { createRootEpic } from 'react-observatory';
+import { createRootEpic } from '@react-observatory/inject-epic';
 
 const logger = action$ =>
   action$

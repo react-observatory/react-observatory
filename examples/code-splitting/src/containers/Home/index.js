@@ -1,6 +1,10 @@
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { withRouterAction } from 'react-observatory';
+import {
+  withAction,
+  withActionFromProps
+} from '@react-observatory/with-action';
+import { withRouterAction } from '@react-observatory/with-router-action';
 import Home from './Home';
 
 const mapStateToProps = ({ globalReducer }) => ({ counter: globalReducer });
@@ -10,6 +14,11 @@ const mapDispatchToProps = {
 };
 
 export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  ),
+  withAction('Action'),
+  withActionFromProps(props => ({ type: 'ActionFromProps', payload: props })),
   withRouterAction('RouterAction.Home')
 )(Home);

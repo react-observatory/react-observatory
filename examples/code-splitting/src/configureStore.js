@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
-import { applyAsyncReducers, applyAsyncEpics } from 'react-observatory';
+import { applyAsyncReducers } from '@react-observatory/inject-reducer';
+import { applyAsyncEpics } from '@react-observatory/inject-epic';
 import { createEpicMiddleware } from 'redux-observable';
 import composeEnhancers from './utils/composeEnhancers';
 import reducerCreator from './reducers';

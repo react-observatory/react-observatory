@@ -1,4 +1,4 @@
-import { composeReducerCreator } from 'react-observatory';
+import { composeReducerCreator } from '@react-observatory/inject-reducer';
 
 const globalReducer = (state = 0, action) => {
   if (action.type === 'Up') {
