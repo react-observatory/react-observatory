@@ -2,6 +2,8 @@ import React, { createFactory } from 'react';
 import PropTypes from 'prop-types';
 import { setDisplayName, wrapDisplayName, setStatic, compose } from 'recompose';
 
+const id = x => x;
+
 /**
  * High-Order Component that enables you to emit an action on componentWillMount.
  *
@@ -26,9 +28,10 @@ export default function withActionFormProps(actionCreator, propTypes) {
     }
 
     if (process.env.NODE_ENV !== 'production') {
-      return setDisplayName(wrapDisplayNam(BaseComponent, 'withAction'))(
-        WithActionFromProps
-      );
+      return compose(
+        propTypes ? setStatic('propTypes', propTypes) : id,
+        setDisplayName(wrapDisplayName(BaseComponent, 'withActionFormProps'))
+      )(WithActionFromProps);
     }
 
     return WithActionFromProps;
