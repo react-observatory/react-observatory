@@ -20,7 +20,7 @@
     "lerna": "^3.4.0",
     "lint-staged": "^7.0.0",
     "prettier": "^1.11.1",
-    "semantic-release": "^15.9.16",
+    "semantic-release": "^17.2.3",
     "semantic-release-monorepo": "^6.0.1"
   },
   "lint-staged": {
